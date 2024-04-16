@@ -1,0 +1,73 @@
+/* TABLES SECTION */
+
+.nav-booking-page {
+    background-color: var(--clr-accent);
+}
+
+.headline-my-bookings {
+    margin-top: 5rem;
+    text-align: center;
+    font-size: var(--fs-h1);
+    color: var(--clr-black);
+    margin-bottom: 1rem;
+    line-height: 115%;
+}
+
+.headline-my-bookings span {
+    color: var(--clr-primary);
+}
+
+.tables-bookings {
+    padding: var(--padding-section);
+}
+
+.tables-bookings article:first-child {
+    margin-bottom: 5rem;
+}
+
+.tables-bookings h2 {
+    color: var(--clr-primary);
+    font-family: var(--ff-body);
+    text-align: center;
+    font-size: var(--fs-h2);
+    margin-bottom: 1rem;
+}
+
+table {
+    font-family: var(--ff-body);
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td,
+th {
+    border: 2px solid var(--clr-primary);
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: var(--clr-light-gray);
+}
+
+.td-delete-trashcan {
+    text-align: center;
+}
+
+.fa-trash-can {
+    cursor: pointer;
+}
+
+.td-delete-checkbox {
+    text-align: center;
+}
+
+.td-delete-checkbox input[type="checkbox"] {
+    accent-color: var(--clr-primary);
+}
+
+.delete-bookings-btn {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: flex-end;
+}

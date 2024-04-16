@@ -1,0 +1,68 @@
+<section class="booking-form-section">
+    <div class="booking-form-container">
+        <form id="booking-form" [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
+            <h3>Boka ny städning</h3>
+            <fieldset>
+                <legend>Val av tjänst</legend>
+                <div>
+                    <input type="radio" id="diamond" formControlName="service" name="service" value="Diamant">
+                    <label for="diamond">Diamant</label>
+                    <div>
+                        <input type="radio" id="top" formControlName="service" name="service" value="Topp" required>
+                        <label for="top">Topp</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="basic" formControlName="service" name="service" value="Basic" required>
+                        <label for="basic">Basic</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="window" formControlName="service" name="service" value="Fönster"
+                            required>
+                        <label for="window">Fönster</label>
+                    </div>
+
+                    <div *ngIf="checkoutForm.controls.service.invalid && checkoutForm.controls.service.touched"
+                        class="error">
+                        Du behöver välja en städtjänst
+                    </div>
+                </div>
+
+            </fieldset>
+            <div class="form-service-choice">
+                <label for="cleaner-choice">Val av städare:</label>
+                <select formControlName="cleanerChoice" name="cleanerChoice" id="cleaner-choice">
+                    <option disabled value="">--Välj städare--</option>
+                    <option value="Städare 1">Städare 1</option>
+                    <option value="Städare 2">Städare 2</option>
+                    <option value="Städare 3">Städare 3</option>
+                </select>
+
+                <div *ngIf="checkoutForm.controls.cleanerChoice.invalid && checkoutForm.controls.cleanerChoice.touched"
+                    class="error">
+                    Vänligen välj en städare!
+                </div>
+            </div>
+            <div class="form-date">
+                <label for="cleaning-date">Datum:</label>
+                <input type="date" [min]="restrictDate" id="cleaning-date" formControlName="cleaningDate"
+                    name="cleaningDate">
+            </div>
+
+            <div *ngIf="checkoutForm.controls.cleaningDate.invalid && checkoutForm.controls.cleaningDate.touched"
+                class="error">
+                Du behöver välja ett datum!
+            </div>
+
+            <div class="form-date">
+                <label for="cleaning-time">Tid:</label>
+                <input type="time" id="cleaning-time" formControlName="cleaningTime" name="cleaningTime" min="07:00"
+                    max="18:00" required>
+                <div *ngIf="checkoutForm.controls.cleaningTime.invalid && checkoutForm.controls.cleaningTime.touched"
+                    class="error">
+                    Du behöver välja en tid!
+                </div>
+            </div>
+            <input class="btn-primary" id="createBookingBtn" value="Boka städning" type="submit">
+        </form>
+    </div>
+</section>

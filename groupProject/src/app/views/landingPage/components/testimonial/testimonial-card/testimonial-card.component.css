@@ -1,0 +1,24 @@
+img {
+    transform: scale(1.05);
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    display: inline-block;
+    position: absolute;
+    top: -50px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    box-shadow: var(--box-shadow);
+}
+
+h3 {
+    color: var(--clr-primary);
+    font-size: 14px;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+p {
+    margin-bottom: 2rem;
+}

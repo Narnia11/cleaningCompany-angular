@@ -1,0 +1,49 @@
+<h2 id="welcome-headline" class="headline-my-bookings">Välkommen {{bookingList[0].kund}}!</h2>
+
+<section class="tables-bookings">
+    <article>
+        <h2>Kommande städningar</h2>
+        <table id="table-container-booked">
+            <thead>
+                <tr>
+                    <th>Datum</th>
+                    <th>Städare</th>
+                    <th>Nivå</th>
+                </tr>
+            </thead>
+            <tbody id="table-body-booked">
+                <tr *ngFor="let book of this.uncompletedBooking">
+                    <td>{{book.datum}} kl. {{book.tid}}</td>
+                    <td>{{book['städare']}}</td>
+                    <td>{{book['nivå']}}</td>
+                    <td><i class="fa-solid fa-trash-can" (click)="deleteBooking(book)"></i></td>
+                </tr>
+            </tbody>
+        </table>
+    </article>
+
+    <article>
+        <h2>Utförda städningar</h2>
+        <table id="table-container-completed">
+            <thead>
+                <tr>
+                    <th>Datum </th>
+                    <th>Städare</th>
+                    <th>Nivå</th>
+                </tr>
+            </thead>
+            <tbody id="table-body-completed">
+                <tr *ngFor="let book of completedBooking">
+                    <td>{{book.datum}} kl. {{book.tid}}</td>
+                    <td>{{book['städare']}}</td>
+                    <td>{{book['nivå']}}</td>
+                    <td><input type="checkbox" (change)="selectBooking($event, book)"></td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="delete-bookings-btn">
+            <button class="btn-primary" id="btn-delete-bookings" (click)="deleteSelected()">Radera historik</button>
+        </div>
+    </article>
+
+</section>

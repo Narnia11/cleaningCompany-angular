@@ -1,0 +1,7 @@
+<app-header></app-header>
+<app-bookings-tables [uncompletedBooking]="uncompleted" [bookingList]="bookingList" 
+[completedBooking]="completed"> 
+</app-bookings-tables>
+<app-form (addItemToUncom)="insertToUnCompleteTable($event)" 
+[bookingList]="bookingList"></app-form>
+<app-footer></app-footer>

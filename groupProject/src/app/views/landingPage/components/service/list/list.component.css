@@ -1,0 +1,19 @@
+
+li {
+    padding-left: 12px;
+    padding-bottom: 12px;
+}
+
+.cleaning-yes::marker {
+    content: '\2714';
+    font-weight: 900;
+    color: var(--clr-primary);
+    font-size: 20px;
+}
+
+.cleaning-no::marker {
+    content: '\2718';
+    font-weight: 900;
+    color: var(--clr-black);
+    font-size: 20px;
+}

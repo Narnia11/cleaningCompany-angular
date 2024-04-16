@@ -1,0 +1,205 @@
+/* General Form Styling */
+
+.form-container {
+    background-color: var(--clr-light-gray);
+    box-shadow: var(--box-shadow);
+    display: flex;
+    justify-content: center;
+    border-radius: var(--border-radius);
+    width: 80%;
+}
+
+.form-flex {
+    display: flex;
+    justify-content: flex-end;
+}
+
+form {
+    padding: 3rem 0.5rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+form h3 {
+    text-align: center;
+    font-family: var(--ff-body);
+    font-size: 2rem;
+    color: var(--clr-black);
+    margin-bottom: 2rem;
+}
+
+.form-focus {
+    position: relative;
+}
+
+.input-focus {
+    color: var(--clr-primary);
+    border: 2px solid var(--clr-primary);
+    background: none;
+    outline: none;
+}
+
+.label-focus {
+    position: absolute;
+    left: 0.5rem;
+    top: 0.7rem;
+    padding: 0 0.5rem;
+    color: var(--clr-primary);
+    cursor: text;
+    transition: top 200ms ease-in, left 200ms ease-in, font-size 200ms ease-in;
+    background-color: var(--clr-light-gray);
+}
+
+.input-focus:hover {
+    border: 2px solid var(--clr-primary);
+}
+
+.input-focus:focus-visible {
+    border: 2px solid var(--clr-primary);
+}
+
+.input-focus:focus-visible~.label-focus,
+.input-focus:not(:placeholder-shown).input-focus:not(:focus)~.label-focus {
+    top: -0.5rem;
+    left: 0.4rem;
+    font-size: 0.8rem;
+}
+
+.form-container label {
+    font-family: var(--ff-body);
+    display: block;
+    color: var(--clr-primary);
+    font-weight: 700;
+    margin-bottom: 2px;
+}
+
+input {
+    font-family: var(--ff-body);
+    border: none;
+    margin-bottom: 1rem;
+    font-family: inherit;
+    font-size: inherit;
+    border-radius: 0.2rem;
+}
+
+input[type="text"],
+input[type="email"] {
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+}
+
+.form-service-choice {
+    margin-bottom: 1rem;
+}
+
+.form-service-choice label {
+    margin-bottom: 0.25rem;
+    color: var(--clr-black);
+    font-size: 18px;
+}
+
+.form-service-choice select {
+    border: 2px solid var(--clr-primary);
+    border-radius: 0.2rem;
+    background-color: var(--clr-light-gray);
+    padding: 0.5rem 0.75rem;
+    color: var(--clr-primary);
+}
+
+.form-date label {
+    margin-bottom: 0.25rem;
+    font-size: 18px;
+    color: var(--clr-black);
+}
+
+.form-date input[type="date"] {
+    background-color: var(--clr-light-gray);
+    border: 2px solid var(--clr-primary);
+    padding: 0.5rem 0.75rem;
+    color: var(--clr-primary);
+}
+
+textarea {
+    border: none;
+    resize: vertical;
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+    margin-bottom: 1rem;
+    font-family: inherit;
+    font-size: inherit;
+    border-radius: 0.2rem;
+}
+
+input[type="submit"] {
+    font-family: var(--ff-body);
+    margin-top: 2rem;
+}
+
+/* Booking Form Styling */
+
+.booking-form-section {
+    padding: var(--padding-section);
+    display: flex;
+    justify-content: center;
+    background-color: var(--clr-accent);
+}
+
+.booking-form-container {
+    background-color: var(--clr-white);
+    box-shadow: var(--box-shadow);
+    display: flex;
+    justify-content: center;
+    border: 2px solid var(--clr-primary);
+    width: 100%;
+}
+
+.booking-form-container h3 {
+    font-size: var(--fs-h2);
+    color: var(--clr-primary);
+}
+
+.booking-form-container label,
+.booking-form-container legend {
+    font-family: var(--ff-body);
+    color: var(--clr-black);
+    font-weight: 700;
+    margin-bottom: 2px;
+    padding: 0 5px;
+}
+
+.booking-form-container input[type="radio"] {
+    accent-color: var(--clr-primary);
+}
+
+.booking-form-container input[type="date"],
+.booking-form-container input[type="time"] {
+    background-color: var(--clr-white);
+    border: 2px solid var(--clr-primary);
+    padding: 0.5rem 0.75rem;
+    color: var(--clr-primary);
+    outline: none;
+    width: 100%;
+}
+
+.booking-form-container select {
+    width: 100%;
+    background-color: var(--clr-white);
+}
+
+.booking-form-container fieldset {
+    border: 2px solid var(--clr-primary);
+    margin-bottom: 1rem;
+}
+
+.booking-form-container fieldset>div {
+    margin-left: 10px;
+    padding: 1rem 0;
+}
+
+.error {
+    color: red;
+    font-size: 16px;
+    padding: 8px;
+    margin: 8px 0;
+}

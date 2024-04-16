@@ -1,0 +1,18 @@
+.footer {
+    padding: 0 5%;
+    height: 70px;
+    background-color: var(--clr-accent);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--clr-primary);
+}
+
+.footer a {
+    font-size: 1.5rem;
+    color: var(--clr-primary);
+}
+
+.footer i:hover {
+    transform: scale(1.1);
+}

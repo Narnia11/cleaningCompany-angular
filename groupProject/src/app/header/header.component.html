@@ -1,0 +1,20 @@
+<nav class="nav">
+    <a href="index.html">
+        <div class="nav-logo">
+            <span>Städafint</span>
+        </div>
+    </a>
+    <ul class="nav-links">
+        <li><a href="#">Våra tjänster</a></li>
+        <li><a href="#">Om oss</a></li>
+        <li><a href="#">Kontakta oss</a></li>
+    </ul>
+    <ul class="nav-login">
+        <app-button text="Logga in" routerLink="Booking" *ngIf="router == '/Main'" ></app-button>
+        <li><a href="#" class="btn-outline" *ngIf="router == '/Main'">Registrera</a></li>
+        <app-button text="Logga ut" routerLink="" *ngIf="router != '/Main'"></app-button>
+        
+
+    </ul>
+    <a href="#" class="mobile-menu"><img src="../../assets/images/hamburger-menu.svg" alt="mobil meny"></a>
+</nav>

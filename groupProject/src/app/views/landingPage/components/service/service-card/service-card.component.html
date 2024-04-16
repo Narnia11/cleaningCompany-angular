@@ -1,0 +1,10 @@
+<article class="services-card">
+    <h3>{{service.title}}</h3>
+    <i class="fa-solid {{service.icon}}"></i>
+    <div class="services-features">
+        <ul>
+            <app-list *ngFor="let x of serviceList" [serviceList] = x></app-list>
+        </ul>
+        
+    </div>
+</article>

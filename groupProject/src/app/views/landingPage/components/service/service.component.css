@@ -1,0 +1,43 @@
+
+.services-section {
+    padding: var(--padding-section);
+    background-color: var(--clr-light-gray);
+}
+
+.services-section h2 {
+    font-size: var(--fs-h2);
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 5rem;
+    color: var(--clr-primary);
+}
+
+app-service-card:nth-child(2) {
+    border: 3px solid var(--clr-primary);
+    border-radius: var(--border-radius);
+    position: relative;
+
+}
+app-service-card:nth-child(2):after {
+    content: 'Populäraste valet';
+    position: absolute;
+    border: 3px solid var(--clr-primary);
+    border-radius: var(--border-radius);
+    padding: 2px;
+    top: -1rem;
+    left: 4rem;
+    text-align: center;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+    font-family: var(--ff-body);
+    background-color: var(--clr-primary);
+    color: var(--clr-light-gray);
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}

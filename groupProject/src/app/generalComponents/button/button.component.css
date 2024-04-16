@@ -1,0 +1,21 @@
+.btn-primary {
+    border: 2px solid var(--clr-primary);
+    padding: .75rem 1.5rem;
+    border-radius: var(--border-radius);
+    background-color: var(--clr-primary);
+    color: var(--clr-white);
+    text-transform: capitalize;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.btn-primary:hover {
+    transform: scale(1.02);
+}
+
+.btn-primary:active {
+    transform: scale(1);
+}
